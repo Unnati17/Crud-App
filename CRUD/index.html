@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/itemoperations.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class='alert-success text-center'>CRUD APP</h1>
+        <div class="form-group">
+            <label for="">Id</label>
+            <input id="id" class="form-control" placeholder="Type Id Here" type="text">
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input id="name" class="form-control" placeholder="Type Name Here" type="text">
+        </div>
+        <div class="form-group">
+            <label for="">Price</label>
+            <input id="price" class="form-control" type="range" min="100" max="1000">
+        </div>
+        <div class="form-group">
+            <label for="">Desc</label>
+            <textarea class="form-control" id="desc" placeholder="Type Desc Here" rows="5" cols="30"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="">Color</label>
+            <input id="color" class="form-control" type="color">
+        </div>
+        <div class="form-group">
+            <label for="">URL</label>
+            <input id="url" class="form-control" type="url" placeholder="http://sample.com">
+        </div>
+    
+
+    <br>
+    <div class="form-group1">
+        <button id="add" class="btn btn-primary">Add</button>
+        <button id="total" class="btn btn-primary">Add</button>
+        <button id="mark" class="btn btn-primary">Add</button>
+        <button id="unmark" class="btn btn-primary">Add</button>
+        <button id="remove" class="btn btn-secondary">Delete</button>
+        <button id="search" class="btn btn-success">Search</button>
+        <button id="update"class="btn btn-danger">Update</button>
+        <button id="save" class="btn btn-warning">Save</button>
+        <button id="load" class="btn btn-info">Load</button>
+        <button id="sort" class="btn btn-secondary">Sort</button>
+        <button id="load" class="btn btn-dark">Load From Server</button>
+        <button class="btn btn-primary">Clear All</button>
+    </div>
+        <br>
+        <div id="searchbar">
+            <select id="searchby">
+                <option value="price">By Price</option>
+                <option value="name">By Name</option>
+                <option value="id">By Id</option>
+            </select>
+            <input type="text" placeholder="Type Here to Search" id='searchTxt'>
+        </div>
+        <br>
+        <h3>Total Records Mark Records Unmark Records</h3>
+        <table class="table table-bordered table-dark">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Desc</th>
+                    <th>Color</th>
+                    <th>URL</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+
+            </tbody>
+        </table>
+        </div>
+</body>
+
+</html>
